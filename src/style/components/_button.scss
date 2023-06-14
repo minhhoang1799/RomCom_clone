@@ -1,0 +1,35 @@
+// style button
+@mixin bgcolor($color) {
+ background-color: $color;
+}
+
+.main__btn {
+ @include flexcenter;
+ font-size: 14px;
+ position: relative;
+ &--btn01 {
+  border: 1px solid $main_color2;
+  border-radius: 5px;
+  font-weight: 400;
+  color: $main_color2;
+ }
+ &--btn02 {
+  background: $main_color2;
+  border: 1px solid $main_color2;
+  border-radius: 5px;
+  color: $main_color2;
+  font-weight: 400;
+  color: $txt3;
+ }
+ &--btn03 {
+  background-color: $main_color1;
+  color: $txt3;
+ }
+ &--btn04 {
+  background-color: $main_color4;
+  color: $txt3;
+ }
+ .link {
+  @include link;
+ }
+}

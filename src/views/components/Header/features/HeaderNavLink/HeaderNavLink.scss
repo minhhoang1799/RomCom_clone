@@ -1,0 +1,32 @@
+@import "../../../../../style/style.scss";
+
+ul {
+ display: flex;
+ align-items: center;
+ li {
+  margin-left: 27px;
+  a {
+   font-size: 16px;
+   font-weight: 400;
+   color: $main_color1;
+   text-decoration: none;
+   &:not(:last-child) {
+    margin-left: 27px;
+   }
+   @include mq(lg, min) {
+    &:hover {
+     text-decoration: underline;
+     text-underline-offset: 5px;
+     text-decoration-color: $main_color3;
+    }
+   }
+  }
+  &.active {
+   a {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: $main_color3;
+   }
+  }
+ }
+}
