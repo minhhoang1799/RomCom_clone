@@ -7,3 +7,12 @@
   min-width: 100%;
  }
 }
+
+main {
+ position: relative;
+ z-index: 10;
+ padding-top: 82px;
+ @include mq(lg, max) {
+  padding-top: 60px;
+ }
+}

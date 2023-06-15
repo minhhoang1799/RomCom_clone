@@ -1,12 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-Home.propTypes = {};
+import "./Home.scss";
+import Banner from "./features/Banner/Banner";
 
-function Home(props) {
+function Home() {
   return (
     <main>
-      <div className="container">home</div>
+      <Banner></Banner>
     </main>
   );
 }

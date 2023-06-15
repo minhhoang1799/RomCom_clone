@@ -1,8 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
-import { Link, NavLink } from "react-router-dom";
-import "./HeaderNavLink.scss";
+import React from "react";
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom/cjs/react-router-dom";
+import "./HeaderNavLink.scss";
 HeaderNavLinkSp.propTypes = {
   isPath: PropTypes.array,
   handleClickLink: PropTypes.func,

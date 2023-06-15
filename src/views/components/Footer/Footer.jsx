@@ -4,9 +4,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom";
 
 import "./Footer.scss";
 
-Footer.propTypes = {};
-
-function Footer(props) {
+function Footer() {
   return (
     <footer>
       <div className="inner">

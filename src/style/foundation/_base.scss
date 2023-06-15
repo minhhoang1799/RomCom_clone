@@ -28,11 +28,12 @@ main {
  z-index: 1;
 }
 .inner {
- max-width: 1410px;
+ max-width: 100%;
  margin: 0 auto;
- @include mq(lg, max) {
-  max-width: 100%;
-  padding: 0 15px;
+ padding: 0 15px;
+ @include mq(xxl, min) {
+  max-width: 1280px;
+  padding: 0;
  }
 }
 @include mq(lg, max) {
