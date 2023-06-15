@@ -4,29 +4,39 @@ ul {
  display: flex;
  align-items: center;
  li {
-  margin-left: 27px;
+  margin-left: 45px;
   a {
+   position: relative;
    font-size: 16px;
    font-weight: 400;
-   color: $main_color1;
+   color: #fff;
    text-decoration: none;
    &:not(:last-child) {
-    margin-left: 27px;
+    margin-left: 45px;
    }
    @include mq(lg, min) {
     &:hover {
-     text-decoration: underline;
-     text-underline-offset: 5px;
-     text-decoration-color: $main_color3;
+     color: $main_color3;
     }
    }
   }
   &.active {
    a {
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    text-decoration-color: $main_color3;
+    &::before {
+     content: "";
+     position: absolute;
+     top: 60%;
+     left: -13px;
+     transform: translateY(-50%);
+     width: 8px;
+     height: 8px;
+     border-radius: 50%;
+     background-color: $main_color3;
+    }
    }
   }
+ }
+ @include mq(lg, max) {
+  display: none;
  }
 }

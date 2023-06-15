@@ -13,7 +13,6 @@ body {
  -moz-osx-font-smoothing: grayscale;
  letter-spacing: 0.01em;
  line-height: 1.5em;
- background-color: #161c24;
 }
 
 a {
@@ -24,9 +23,17 @@ a {
  }
 }
 
+main {
+ position: relative;
+ z-index: 1;
+}
 .inner {
  max-width: 1410px;
  margin: 0 auto;
+ @include mq(lg, max) {
+  max-width: 100%;
+  padding: 0 15px;
+ }
 }
 @include mq(lg, max) {
  img {

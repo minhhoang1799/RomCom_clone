@@ -3,4 +3,7 @@
  min-width: 1200px;
  margin: 0 auto;
  overflow: hidden;
+ @include mq(lg, max) {
+  min-width: 100%;
+ }
 }

@@ -4,7 +4,7 @@ import MODULE_PAGES from "../pages";
 export const ROUTER_PAGE = [
   {
     key: "home",
-    name: "Việc làm",
+    name: "Trang chủ",
     exact: true,
     path: "/",
     component: MODULE_PAGES.Home,
