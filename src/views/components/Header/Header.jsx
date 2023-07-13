@@ -7,7 +7,7 @@ import HeaderNavLinkSp from "./features/HeaderNavLink/HeaderNavLinkSp";
 Header.propTypes = {};
 
 function Header() {
-  const isBody = document.querySelector("body");
+  const isBody = document.querySelector("body #root");
   const [active, setActive] = useState(false);
   const handleNavMobile = () => {
     !active ? setActive(true) : setActive(false);

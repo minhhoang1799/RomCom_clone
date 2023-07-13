@@ -1,0 +1,22 @@
+{
+ "collection": [
+  {
+   "id": 1,
+   "image": "https://zenno.moe/logo/MangaDex.png",
+   "name": "mangadex",
+   "link": "https://mangadex.org/",
+   "description": "Lọc manga romcom mới được cập nhật trên Mangadex",
+   "status": [
+    "R18"
+   ]
+  },
+  {
+   "id": 2,
+   "image": "https://zenno.moe/logo/Nhentai.png",
+   "name": "NhenTai",
+   "link": "https://nhentai.net/",
+   "description": "Only Vanila",
+   "status": []
+  }
+ ]
+}

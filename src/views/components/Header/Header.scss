@@ -52,7 +52,7 @@ header {
  &__Navsp {
   position: fixed;
   top: 58px;
-  left: 0;
+  left: -100%;
   width: 100%;
   height: 100vh;
   z-index: -1;
@@ -61,6 +61,7 @@ header {
   &.active {
    z-index: 98;
    opacity: 1;
+   left: 0;
    .header__sp {
     left: 0;
    }
@@ -111,9 +112,9 @@ header {
  }
 }
 
-body {
+#root {
  &.active {
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
  }
 }

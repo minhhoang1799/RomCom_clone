@@ -1,8 +1,29 @@
+@import "../../App.scss";
 .home {
  &__bg {
   background-image: linear-gradient(to right, #412323, rgba(22, 28, 36, 0.88));
  }
  &__block {
-  padding: 60px 0;
+  background-image: linear-gradient(to bottom, rgba(145, 158, 171, 0), rgba(145, 158, 171, 0.12));
+  padding: 40px 0;
+  @include mq(xl, min) {
+   padding: 60px 0;
+  }
+ }
+ &__block02 {
+  padding: 40px 0;
+  @include mq(xl, min) {
+   padding: 60px 0;
+  }
+ }
+ &__title {
+  font-size: 18px;
+  color: rgb(99, 115, 129);
+  text-align: center;
+  margin-bottom: 30px;
+  @include mq(lg, min) {
+   text-align: left;
+   font-size: 24px;
+  }
  }
 }
