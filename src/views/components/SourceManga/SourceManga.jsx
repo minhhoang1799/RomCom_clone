@@ -3,6 +3,7 @@ import  Swiper  from 'swiper';
 import 'swiper/css';
 import './SourceManga.scss'
 import PropTypes from 'prop-types';
+import Product from '../Product/Product';
 
 SourceManga.propTypes = {
  title: PropTypes.string,
@@ -19,7 +20,6 @@ SourceManga.props = {
 }
 function SourceManga(props) {
  const {title, name, description, data} = props;
- console.log(data)
    const swiperRef = useRef(null);
   const handlePrev = () => {
    if (swiperRef.current) {
@@ -73,12 +73,7 @@ function SourceManga(props) {
              {
               data.map((item) => (
                 <div className="swiper-slide" key={`slider_${item.id}`}>
-                 <div className="slider__item">
-                  <div className="slider__image" style={{'background-image': `url('${item.image}')`,}}></div>
-                  <div className="slider__content">
-                   <h3 className="slider__name">{item.mangaName}</h3>
-                  </div>
-                 </div>
+                 <Product dataProduct={item}></Product>
                 </div>
               ))
              }

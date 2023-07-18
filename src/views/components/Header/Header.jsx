@@ -4,11 +4,16 @@ import "./Header.scss";
 import HeaderNavLink from "./features/HeaderNavLink/HeaderNavLink";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import HeaderNavLinkSp from "./features/HeaderNavLink/HeaderNavLinkSp";
+import DATA from '../../../api/data.json';
 Header.propTypes = {};
 
 function Header() {
   const isBody = document.querySelector("body #root");
   const [active, setActive] = useState(false);
+  const category = [];
+  for (const name in DATA) {
+     category.push(name)
+  }
   const handleNavMobile = () => {
     !active ? setActive(true) : setActive(false);
   };
@@ -82,7 +87,7 @@ function Header() {
                 </h1>
               </div>
               <nav className="header__nav">
-                <HeaderNavLink isPath={ROUTER_PAGE}></HeaderNavLink>
+                <HeaderNavLink isPath={ROUTER_PAGE} category={category}></HeaderNavLink>
               </nav>
             </div>
             <div className="header__right">
@@ -113,6 +118,7 @@ function Header() {
               <HeaderNavLinkSp
                 isPath={ROUTER_PAGE}
                 handleClickLink={handleNavSp}
+                category={category}
               ></HeaderNavLinkSp>
             </div>
             <div className="header__bg" onClick={() => handleNavMobile()}></div>

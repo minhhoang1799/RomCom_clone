@@ -5,6 +5,7 @@ export const ROUTER_PAGE = [
   {
     key: "home",
     name: "Trang chủ",
+    isSupNav: false,
     exact: true,
     path: "/",
     component: MODULE_PAGES.Home,
@@ -13,22 +14,25 @@ export const ROUTER_PAGE = [
   {
     key: "about",
     name: "Thư viện",
+    isSupNav: false,
     exact: true,
     path: "/about",
     component: MODULE_PAGES.About,
     private: false
   },
   {
-    key: "news",
-    name: "Tin tức",
+    key: "resource",
+    name: "Các nguồn",
+    isSupNav: true,
     exact: true,
-    path: "/news",
-    component: MODULE_PAGES.News,
+    path: "/resource",
+    component: MODULE_PAGES.Resource,
     private: false
   },
   {
     key: "contact",
     name: "Liên hệ",
+    isSupNav: false,
     exact: true,
     path: "/contact",
     component: MODULE_PAGES.Contact,
@@ -36,6 +40,7 @@ export const ROUTER_PAGE = [
   },
   {
     key: "error",
+    isSupNav: false,
     component: MODULE_PAGES.Error
   }
 ];
