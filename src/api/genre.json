@@ -1,0 +1,88 @@
+{
+ "data": [
+  {
+   "id": 1,
+   "genreName": "Action",
+   "description": null,
+   "createdAt": "2023-06-18T10:43:28.000Z",
+   "updatedAt": "2023-06-18T10:43:28.000Z"
+  },
+  {
+   "id": 2,
+   "genreName": "Fantasy",
+   "description": null,
+   "createdAt": "2023-06-18T10:43:28.000Z",
+   "updatedAt": "2023-06-18T10:43:28.000Z"
+  },
+  {
+   "id": 3,
+   "genreName": "Harem",
+   "description": null,
+   "createdAt": "2023-06-18T10:43:28.000Z",
+   "updatedAt": "2023-06-18T10:43:28.000Z"
+  },
+  {
+   "id": 4,
+   "genreName": "Ecchi",
+   "description": null,
+   "createdAt": "2023-06-18T10:43:28.000Z",
+   "updatedAt": "2023-06-18T10:43:28.000Z"
+  },
+  {
+   "id": 5,
+   "genreName": "Seiner",
+   "description": null,
+   "createdAt": "2023-06-18T10:43:28.000Z",
+   "updatedAt": "2023-06-18T10:43:28.000Z"
+  },
+  {
+   "id": 6,
+   "genreName": "Parody",
+   "description": null,
+   "createdAt": "2023-06-18T10:43:28.000Z",
+   "updatedAt": "2023-06-18T10:43:28.000Z"
+  },
+  {
+   "id": 7,
+   "genreName": "Isekai",
+   "description": null,
+   "createdAt": "2023-06-18T10:43:28.000Z",
+   "updatedAt": "2023-06-18T10:43:28.000Z"
+  },
+  {
+   "id": 8,
+   "genreName": "Comedy",
+   "description": null,
+   "createdAt": "2023-06-18T10:43:28.000Z",
+   "updatedAt": "2023-06-18T10:43:28.000Z"
+  },
+  {
+   "id": 9,
+   "genreName": "School life",
+   "description": null,
+   "createdAt": "2023-06-18T10:43:28.000Z",
+   "updatedAt": "2023-06-18T10:43:28.000Z"
+  },
+  {
+   "id": 10,
+   "genreName": "test",
+   "description": null,
+   "createdAt": "2023-06-26T04:49:27.000Z",
+   "updatedAt": "2023-06-26T04:49:27.000Z"
+  },
+  {
+   "id": 11,
+   "genreName": "Another",
+   "description": "test description of another",
+   "createdAt": "2023-06-26T04:51:14.000Z",
+   "updatedAt": "2023-06-26T14:33:07.000Z"
+  },
+  {
+   "id": 12,
+   "genreName": "Another test",
+   "description": "test description of another",
+   "createdAt": "2023-06-26T04:54:25.000Z",
+   "updatedAt": "2023-06-26T14:33:46.000Z"
+  }
+ ]
+}
