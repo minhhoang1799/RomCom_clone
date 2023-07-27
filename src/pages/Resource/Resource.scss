@@ -11,7 +11,7 @@
  &__row {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 10px -30px;
   &::after {
    content: "";

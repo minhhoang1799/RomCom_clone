@@ -1,0 +1,153 @@
+@import "../../App.scss";
+.lib {
+ &__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px rgba(145, 158, 171, 0.12);
+  border-radius: 8px;
+  padding: 5px 0;
+  margin-bottom: 20px;
+  li {
+   flex: 0 0 calc(100% / 3);
+   max-width: calc(100% / 3);
+   padding: 0 5px;
+   a {
+    padding: 20px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    @include mq(xl, min) {
+     &:hover {
+      background-color: rgba(0, 163, 172, 0.16);
+     }
+    }
+   }
+   &.active {
+    a {
+     background-color: rgba(0, 163, 172, 0.16);
+    }
+   }
+  }
+ }
+ &__filter {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
+  &--btn {
+   display: inline-block;
+   cursor: pointer;
+   i {
+    margin-right: 5px;
+   }
+   .is-btn {
+    font-size: 14px;
+    color: #00a3ac;
+   }
+  }
+  .is-filter {
+   position: fixed;
+   top: 112px;
+   right: -100%;
+   z-index: 999;
+   width: 25vw;
+   height: 100vh;
+   background-color: rgb(33, 43, 54);
+   transition: all ease-in-out 0.8s;
+   padding: 40px 30px;
+   .form-group {
+    margin-bottom: 20px;
+   }
+   input,
+   .css-13cymwt-control {
+    background-color: rgba(145, 158, 171, 0.08);
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+   }
+   input {
+    padding: 10px 15px;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+    &::placeholder {
+     font-size: 11px;
+    }
+   }
+   button {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(12, 214, 110);
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    @include mq(xl, min) {
+     &:hover {
+      transform: translateY(-5px);
+     }
+    }
+   }
+   .css-1fdsijx-ValueContainer,
+   .css-qbdosj-Input,
+   .css-3w2yfm-ValueContainer {
+    height: 40px;
+    outline: none !important;
+    margin: 0;
+    padding: 0 15px;
+   }
+   .css-1dimb5e-singleValue {
+    color: #fff;
+    font-size: 14px;
+   }
+   .css-t3ipsp-control {
+    border: none;
+    box-shadow: none;
+    background-color: rgba(145, 158, 171, 0.08);
+    color: #fff;
+    padding: 0;
+   }
+   .css-1p3m7a8-multiValue {
+    color: rgb(33, 43, 54);
+    background-color: rgb(12, 214, 110);
+    font-size: 12px;
+    outline: none;
+    border-radius: 999px;
+    margin: 0 2px !important;
+   }
+   .css-3w2yfm-ValueContainer {
+    padding: 0 8px !important;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    width: max-content;
+    overflow: auto;
+   }
+   .css-1nmdiq5-menu {
+    background-color: rgba(0, 163, 172, 1);
+    color: #fff;
+   }
+   .css-d7l1ni-option {
+    background-color: rgb(12, 214, 110) !important;
+   }
+   .css-1u9des2-indicatorSeparator {
+    display: none;
+   }
+   &.active {
+    right: 0;
+   }
+  }
+ }
+}

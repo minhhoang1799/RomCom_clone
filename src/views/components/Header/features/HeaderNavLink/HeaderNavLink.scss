@@ -1,42 +1,87 @@
 @import "../../../../../style/style.scss";
 
-ul {
- display: flex;
- align-items: center;
- li {
-  margin-left: 45px;
-  a {
+header {
+ ul {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  li {
    position: relative;
-   font-size: 16px;
-   font-weight: 400;
-   color: #fff;
-   text-decoration: none;
-   &:not(:last-child) {
-    margin-left: 45px;
-   }
-   @include mq(lg, min) {
-    &:hover {
-     color: $main_color3;
-    }
-   }
-  }
-  &.active {
+   margin: 0 20px;
+   padding: 15px 0;
    a {
-    &::before {
-     content: "";
-     position: absolute;
-     top: 60%;
-     left: -13px;
-     transform: translateY(-50%);
-     width: 8px;
-     height: 8px;
-     border-radius: 50%;
-     background-color: $main_color3;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    @include mq(lg, min) {
+     &:hover {
+      color: $main_color3;
+     }
+    }
+   }
+   &.active {
+    a {
+     &::before {
+      content: "";
+      position: absolute;
+      top: 60%;
+      left: -13px;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $main_color3;
+     }
+    }
+   }
+  }
+  @include mq(lg, max) {
+   display: none;
+  }
+ }
+}
+
+.header__nav {
+ &--child {
+  position: absolute;
+  top: calc(100% + 45px);
+  left: -100%;
+  transform: translateY(-50%);
+  z-index: 2;
+  min-width: 200px;
+  background-color: rgba(0, 163, 172, 1);
+  border-radius: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease-in-out 0.5s;
+  &.active {
+   opacity: 1;
+   pointer-events: initial;
+   left: -50%;
+  }
+  li {
+   margin-left: 0;
+   width: 100%;
+   padding: 10px 15px;
+   a {
+    margin-left: 0;
+    @include mq(xl, min) {
+     &:hover {
+      color: #000;
+     }
     }
    }
   }
  }
- @include mq(lg, max) {
-  display: none;
- }
+}
+.ml-0 {
+ margin-left: 0 !important;
 }

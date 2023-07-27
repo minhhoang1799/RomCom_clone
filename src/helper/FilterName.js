@@ -1,8 +1,7 @@
 export function FilterName(items, name) {
  name = name.toLowerCase();
+ const isname = name.trim()
  return items.filter(item =>
-  item.name.split(' ').some(word =>
-   word.toLowerCase().startsWith(name)
-  )
- );
+  item.name.toLowerCase().includes(isname)
+ )
 }

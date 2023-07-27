@@ -8,10 +8,13 @@ import Product from "../../views/components/Product/Product";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 import BaseSelect from "../../views/components/BaseSelect/BaseSelect";
 import { FilterName } from "../../helper/FilterName";
+import './About.scss'
 
 About.propTypes = {};
 
 function About() {
+  const [indActive, setIndActive] = useState(-1);
+  const [filterActive, setFilterActive] = useState(false)
   const getCate = () => {
     let listCate = [];
     let listProduct = [];
@@ -48,15 +51,16 @@ function About() {
     }
     return {schema,initialValues}
   }
+    const [product,setProduct] = useState(getCate().listProduct);
   const validationSchema = Yup.object().shape({
     ...VALIDATE_FORM(Yup).schema
   })
   const handleOnChange = (value,setFieldValue,name) => {
     setFieldValue(name,value)
   }
-  const [product,setProduct] = useState(getCate().listProduct)
   const isCate = getCate().listCate;
-  const handleFilterForCate = (cate) => {
+  const handleFilterForCate = (cate,ind) => {
+    setIndActive(ind)
     setProduct(DATA[`${cate}`])
   }
   const handleFilter = (data,list,title) => {
@@ -97,16 +101,15 @@ function About() {
             <ul className="lib__list">
               {
                 isCate.map((cate,ind) => (
-                  <li key={`cat_${ind}`} onClick={() => handleFilterForCate(cate)}><Link to={`/about?cate=${cate}`}>{cate}</Link></li>
+                  <li key={`cat_${ind}`} onClick={() => handleFilterForCate(cate,ind)} className={ind === indActive ? "active" : ""}><Link to={`/about?cate=${cate}`}>{cate}</Link></li>
                 ))
               }
             </ul>
             <div className="lib__filter">
-              <div className="lib__filter--btn">
-                <p className="is-btn"></p>
-                <span>Bộ lọc</span>
+              <div className="lib__filter--btn" onClick={() => setFilterActive(true)}>
+                <p className="is-btn"><i className="fa-solid fa-filter"></i><span>Bộ lọc</span></p>
               </div>
-              <div className="is-filter">
+              <div className={filterActive ? "is-filter active" : "is-filter"}>
                 <Formik
                   initialValues={VALIDATE_FORM(Yup).initialValues}
                   enableReinitialize
@@ -126,7 +129,7 @@ function About() {
                         <div className="form-group">
                           <BaseSelect defaultValue={[]} isMulti={true} name={`category`} options={isOptions} placeholder={'Tag'}></BaseSelect>
                         </div>
-                         <button type="submit">Submit</button>
+                         <button type="submit" onClick={() => setFilterActive(false)}>Submit</button>
                     </Form>
                   )}
                 </Formik>
@@ -135,16 +138,16 @@ function About() {
           </div>
         </div>
       </section>
-      <section className="lib__list">
+      <section className="lib__wrap">
         <div className="inner">
           <div className="container">
-            <div className="lib_row">
+            <div className="resource__row">
               {
                product.length != 0 
                ?  <>
                 {
                   product.map((item,ind) => (
-                   <div className="lib_col" key={`product_${ind}`}>
+                   <div className="resource__col" key={`product_${ind}`}>
                       <Product dataProduct={item}></Product>
                     </div>
                 ))

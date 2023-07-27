@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
 import "./HeaderNavLink.scss";
@@ -15,9 +15,13 @@ HeaderNavLink.Props = {
 
 function HeaderNavLink(props) {
   const { isPath, category } = props;
+  const [active, setActive] = useState(false);
+  const handleActive = () => {
+    !active ? setActive(true) : setActive(false)
+  }
   const location = useLocation();
   return (
-    <ul>
+    <ul className="header__list--nav">
       {isPath.map((link) => {
         if (link.path)
           return (
@@ -28,10 +32,10 @@ function HeaderNavLink(props) {
               {!link.isSupNav
               ? <Link to={link.path}>{link.name}</Link>
               : <>
-                <p>{link.name}</p>
-                <ul className="header__nav--child">
+                <a className="ml-0" onClick={() => {handleActive()}} onMouseEnter={() => setActive(true)}>{link.name}</a>
+                <ul className={active ? "header__nav--child active" : "header__nav--child"} onMouseLeave={() => setActive(false)}>
                   {category.map((item) => (
-                    <li key={item}><Link to={`${link.path}/?cate=${item}`}>{item}</Link></li>
+                    <li key={item}><Link to={`${link.path}?cate=${item}`}>{item}</Link></li>
                   ))}
                 </ul>
               </>
