@@ -153,9 +153,9 @@ function About() {
                 ))
                 }
                </>
-               : <>
+               : <p className="list-none">
                không có dữ liệu
-               </>
+               </p>
               }
             </div>
           </div>
